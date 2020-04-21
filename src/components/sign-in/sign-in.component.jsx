@@ -32,7 +32,7 @@ class SignIn extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <FormInput 
                     name='email' 
-                    label="email"
+                    label="Email"
                     type='email' 
                     value={this.state.email} 
                     handleChange={this.handleChange} 
@@ -40,7 +40,7 @@ class SignIn extends Component {
                     />
                     <FormInput
                         name='password'
-                        label="password"
+                        label="Password"
                         type='password'
                         handleChange={this.handleChange}
                         value={this.state.password}
