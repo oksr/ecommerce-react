@@ -9,7 +9,7 @@ import { ReactComponent as Logo } from '../../assets/logo.svg'
 import './header.styles.scss';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
-import {selectCartHidden, selectCartItems} from '../../redux/cart/cart.selectors';
+import {selectCartHidden} from '../../redux/cart/cart.selectors';
 import {selectCurrentUser} from  '../../redux/user/user.selector';
 
 
