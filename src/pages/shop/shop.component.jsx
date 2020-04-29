@@ -22,14 +22,19 @@ class ShopPage extends React.Component {
   componentDidMount() {
     const { updateCollections } = this.props;
     const collectionRef = firestore.collection('collections');
+
+    // fetch(' https://firestore.googleapis.com/v1/projects/crown-db-584cc/databases/(default)/documents/collections')
+    // .then(response => response.json())
+    // .then(collections => console.log(collections));
     
-    this.unsubscribeFromSnapshot = collectionRef.onSnapshot( async snapshot => {
+    collectionRef.get().then(snapshot => {
       const collectionsMap = converCollectionsSnapshotToMap(snapshot);
       updateCollections(collectionsMap);
       this.setState({loading: false});
     });
   }
-  
+  //   https://firestore.googleapis.com/v1/projects/crown-db-584cc/databases/(default)/documents/
+
   render() {
     const { match } = this.props;
     const { loading } = this.state;

@@ -27,3 +27,15 @@ export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
 `;
+
+export const OptionLinkWr = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  top: 10px;
+`
+export const Span = styled.span`
+  margin-bottom: 8px;
+`
